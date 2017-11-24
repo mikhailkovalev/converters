@@ -72,6 +72,10 @@ class UndeformatingDecorator(RectangleConverterDecorator):
     Коэффициенты растяжения вдоль обеих осей одинаковы
     """
     def __init__(self, stuffing, inside=True):
+        """
+        Параметр inside говорит о том, должна ли область аргументов
+        целиком поместиться внутри области значений
+        """
         super().__init__(stuffing)
         self.extr = self.min if inside else self.max
 
